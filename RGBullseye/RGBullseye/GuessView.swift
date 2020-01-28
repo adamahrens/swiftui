@@ -15,9 +15,8 @@ struct GuessView: View {
   private let initialGuess = Int.random(in: 1...100)
 
   func computeScore() -> Int {
-
     let difference = abs(initialGuess - Int(guess * 100))
-    return 100 - difference
+    return difference
   }
 
   var body: some View {
