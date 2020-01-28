@@ -14,6 +14,7 @@
 		436ACA2D23DE898400829A19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436ACA2C23DE898400829A19 /* Preview Assets.xcassets */; };
 		436ACA3023DE898400829A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436ACA2E23DE898400829A19 /* LaunchScreen.storyboard */; };
 		43D0A5D723DFC43F004D0F51 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D0A5D623DFC43F004D0F51 /* GuessView.swift */; };
+		43D0A5D923DFD8E7004D0F51 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D0A5D823DFD8E7004D0F51 /* Counter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		436ACA2F23DE898400829A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		436ACA3123DE898400829A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43D0A5D623DFC43F004D0F51 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
+		43D0A5D823DFD8E7004D0F51 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				436ACA2523DE898300829A19 /* SceneDelegate.swift */,
 				436ACA2723DE898300829A19 /* ContentView.swift */,
 				43D0A5D623DFC43F004D0F51 /* GuessView.swift */,
+				43D0A5D823DFD8E7004D0F51 /* Counter.swift */,
 				436ACA2923DE898400829A19 /* Assets.xcassets */,
 				436ACA2E23DE898400829A19 /* LaunchScreen.storyboard */,
 				436ACA3123DE898400829A19 /* Info.plist */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D0A5D923DFD8E7004D0F51 /* Counter.swift in Sources */,
 				43D0A5D723DFC43F004D0F51 /* GuessView.swift in Sources */,
 				436ACA2423DE898300829A19 /* AppDelegate.swift in Sources */,
 				436ACA2623DE898300829A19 /* SceneDelegate.swift in Sources */,

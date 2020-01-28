@@ -20,17 +20,19 @@ struct GuessView: View {
   }
 
   var body: some View {
-    VStack {
-      Text("Put the bullsye closest to \(initialGuess)")
-      GuessSlider(value: $guess)
-      Button(action: {
-        self.showAlert = true
-      }) {
-        Text("Guess")
-      }.alert(isPresented: $showAlert) {
-        Alert(title: Text("Your Score"), message: Text(String(computeScore())))
+    NavigationView {
+      VStack {
+        Text("Put the bullsye closest to \(initialGuess)")
+        GuessSlider(value: $guess).background(Color.blue)
+        Button(action: {
+          self.showAlert = true
+        }) {
+          Text("Guess")
+        }.alert(isPresented: $showAlert) {
+          Alert(title: Text("Your Score"), message: Text(String(computeScore())))
         }.padding()
-    }
+      }
+    }.navigationBarTitle("Matcher", displayMode: .inline)
   }
 }
 
@@ -43,12 +45,13 @@ struct GuessSlider: View {
       Slider(value: $value)
       Text("100")
     }.padding(.leading, 20.0)
-     .padding(.trailing, 20.0)
+      .padding(.trailing, 20.0)
   }
 }
 
 struct GuessView_Previews: PreviewProvider {
   static var previews: some View {
-    GuessView()
+    // Need top level element in NavigationView
+    GuessView().environment(\.colorScheme, .light)
   }
 }

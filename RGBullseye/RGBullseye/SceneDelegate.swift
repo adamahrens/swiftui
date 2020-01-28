@@ -21,9 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // Create the SwiftUI view that provides the window contents.
 
-//    let contentView = ContentView(redGuess: 0.5, greenGuess: 0.5, blueGuess: 0.5)
+    let contentView = ContentView(redGuess: 0.5, greenGuess: 0.5, blueGuess: 0.5)
 
-    let contentView = GuessView()
+//    let contentView = GuessView()
 
     // Use a UIHostingController as window root view controller.
     if let windowScene = scene as? UIWindowScene {
