@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,11 +57,23 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whd-Ic-b39">
+                                <rect key="frame" x="306" y="304" width="200" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Dj9-Cn-cBC"/>
+                                    <constraint firstAttribute="width" constant="200" id="cKW-pi-XMS"/>
+                                </constraints>
+                                <state key="normal" title="Play RGB Guess"/>
+                                <connections>
+                                    <segue destination="AJI-GE-iv6" kind="show" destinationCreationSelector="presentRGBGame:sender:" id="wlm-vJ-ul7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hhD-Xg-hDw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2fP-MW-ivH"/>
                             <constraint firstItem="Zg0-Xv-AnB" firstAttribute="centerY" secondItem="Ewn-YW-ymX" secondAttribute="centerY" id="85k-40-JGe"/>
+                            <constraint firstItem="Whd-Ic-b39" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FeA-rm-0Yd"/>
                             <constraint firstItem="hhD-Xg-hDw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Gdk-Ed-usV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zg0-Xv-AnB" secondAttribute="trailing" constant="10" id="Wae-Za-DdK"/>
                             <constraint firstItem="Zg0-Xv-AnB" firstAttribute="leading" secondItem="Ewn-YW-ymX" secondAttribute="trailing" constant="10" id="ePa-wj-gG4"/>
@@ -71,6 +81,7 @@
                             <constraint firstItem="LMD-zE-t25" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iUm-yc-Cae"/>
                             <constraint firstItem="LMD-zE-t25" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nPD-eX-lM0"/>
                             <constraint firstItem="5je-zt-DHd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qEd-Kc-uI1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Whd-Ic-b39" secondAttribute="bottom" constant="8" id="ssV-mP-V8o"/>
                             <constraint firstItem="Ewn-YW-ymX" firstAttribute="top" secondItem="hhD-Xg-hDw" secondAttribute="bottom" constant="30" id="ujr-Xm-edR"/>
                             <constraint firstItem="5je-zt-DHd" firstAttribute="centerY" secondItem="Ewn-YW-ymX" secondAttribute="centerY" id="vRa-27-lRq"/>
                         </constraints>
@@ -84,6 +95,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33.802816901408448" y="24.375"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="8le-dc-Bcf">
+            <objects>
+                <hostingController id="AJI-GE-iv6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Pv-DF-Uh1"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZQ-GC-zm4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="926"/>
         </scene>
     </scenes>
 </document>

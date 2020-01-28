@@ -27,6 +27,7 @@
 /// THE SOFTWARE.
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
   @IBOutlet weak var slider: UISlider!
@@ -59,5 +60,8 @@ class ViewController: UIViewController {
     currentValue = lroundf(slider.value)
   }
   
+  @IBSegueAction func presentRGBGame(_ coder: NSCoder, sender: Any?) -> UIViewController? {
+    return UIHostingController(coder: coder, rootView: RGBUIView(redGuess: 0.5, greenGuess: 0.5, blueGuess: 0.5))
+  }
 }
 
