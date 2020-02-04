@@ -27,36 +27,31 @@
 /// THE SOFTWARE.
 
 import UIKit
-import SwiftUI
 
-class ViewController: UIViewController {
-  @IBOutlet weak var slider: UISlider!
-  @IBOutlet weak var targetLabel: UILabel!
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
   
-  var currentValue = 50
-  var targetValue = Int.random(in: 1...100)
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    targetLabel.text = String(targetValue)
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    // Override point for customization after application launch.
+    return true
   }
   
-  @IBAction func showAlert() {
-    let difference = abs(targetValue - currentValue)
-    let points = 100 - difference
-    
-    let alert = UIAlertController(title: "Your Score", message: String(points), preferredStyle: .alert)
-    
-    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-    alert.addAction(action)
-    present(alert, animated: true, completion: nil)
+  func applicationWillTerminate(_ application: UIApplication) {
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
   
-  @IBAction func sliderMoved(_ slider: UISlider) {
-    currentValue = lroundf(slider.value)
+  // MARK: UISceneSession Lifecycle
+  
+  func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+    // Called when a new scene session is being created.
+    // Use this method to select a configuration to create the new scene with.
+    return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
   }
   
-  @IBSegueAction func presentRGBGame(_ coder: NSCoder, sender: Any?) -> UIViewController? {
-    return UIHostingController(coder: coder, rootView: RGBUIView(redGuess: 0.5, greenGuess: 0.5, blueGuess: 0.5))
+  func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+    // Called when the user discards a scene session.
+    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
   }
 }
+
