@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43FB561E23E910F600B5145F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB561D23E910F600B5145F /* WelcomeView.swift */; };
 		6758885722DA0C090015DE4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758885622DA0C090015DE4B /* AppDelegate.swift */; };
 		6758885922DA0C090015DE4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758885822DA0C090015DE4B /* SceneDelegate.swift */; };
 		6758885D22DA0C0B0015DE4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6758885C22DA0C0B0015DE4B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43FB561D23E910F600B5145F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeView.swift; path = Sources/App/WelcomeView.swift; sourceTree = SOURCE_ROOT; };
 		6758885322DA0C090015DE4B /* Kuchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6758885622DA0C090015DE4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6758885822DA0C090015DE4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		5797556B22E124B400246F70 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				43FB561D23E910F600B5145F /* WelcomeView.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				6758885722DA0C090015DE4B /* AppDelegate.swift in Sources */,
 				6758885922DA0C090015DE4B /* SceneDelegate.swift in Sources */,
+				43FB561E23E910F600B5145F /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
