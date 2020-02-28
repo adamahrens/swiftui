@@ -30,11 +30,12 @@ import SwiftUI
 
 struct RegisterView {
   
-  @State var name: String = ""
-    
-  @State var isRegistered: Bool = false
+  @State var name = ""
+  @State var isRegistered = false
   
   private let title = "Welcome to Kuchi"
+  
+  @EnvironmentObject var user: User
   
   func registerUser() {
     if name.isEmpty == false {

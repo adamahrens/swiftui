@@ -33,6 +33,8 @@ struct WelcomeView {
   @State private var showHome = false
     
   private let name: String
+  
+  @EnvironmentObject var user: User
     
   init(name: String) {
     self.name = name
@@ -69,7 +71,7 @@ extension WelcomeView: View {
 struct WelcomeView_Previews: PreviewProvider {
 
   static var previews: some View {
-    WelcomeView(name: "Ray")
+    WelcomeView(name: "Ray").environmentObject(User(name: "Ray Ray"))
   }
 }
 #endif

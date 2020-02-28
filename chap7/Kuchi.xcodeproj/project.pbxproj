@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4391CAC92408C0A1000C6B27 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391CAC82408C0A1000C6B27 /* Profile.swift */; };
+		4391CACB2408C0F8000C6B27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391CACA2408C0F8000C6B27 /* User.swift */; };
 		5726996422E3DD8700423A69 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726996322E3DD8700423A69 /* StarterView.swift */; };
 		5797556D22E124E200246F70 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5797556C22E124E200246F70 /* RegisterView.swift */; };
 		5797556F22E124EE00246F70 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5797556E22E124EE00246F70 /* WelcomeView.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4391CAC82408C0A1000C6B27 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		4391CACA2408C0F8000C6B27 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5726996322E3DD8700423A69 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
 		5797556C22E124E200246F70 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		5797556E22E124EE00246F70 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				6793694E23007B1D00AC4630 /* ProfileView.swift */,
+				4391CAC82408C0A1000C6B27 /* Profile.swift */,
+				4391CACA2408C0F8000C6B27 /* User.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6758885722DA0C090015DE4B /* AppDelegate.swift in Sources */,
+				4391CAC92408C0A1000C6B27 /* Profile.swift in Sources */,
 				6758885922DA0C090015DE4B /* SceneDelegate.swift in Sources */,
 				9B352BD122F9AB5F00644004 /* ScoreView.swift in Sources */,
 				5797556F22E124EE00246F70 /* WelcomeView.swift in Sources */,
@@ -304,6 +311,7 @@
 				57D84F4622E4DC370059EC25 /* ChallengeView.swift in Sources */,
 				6758889122DF0E780015DE4B /* ChoicesView.swift in Sources */,
 				57D84F4022E4CB030059EC25 /* ProgressView.swift in Sources */,
+				4391CACB2408C0F8000C6B27 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

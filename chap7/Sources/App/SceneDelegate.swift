@@ -43,11 +43,12 @@ extension SceneDelegate: UIWindowSceneDelegate {
     
     if let windowScene = scene as? UIWindowScene {
       let practice = PracticeStore()
+      let user = User()
       
       let window = UIWindow(windowScene: windowScene)
       window.rootViewController = UIHostingController(
         rootView: StarterView(isRegistered: false, name: "")
-          .environmentObject(practice)
+          .environmentObject(user)
       )
       self.window = window
       window.makeKeyAndVisible()

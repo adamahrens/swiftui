@@ -35,17 +35,17 @@ import Learning
 /// Displays the practice view with question and potential answers (choices).
 struct PracticeView {
   
-  @EnvironmentObject private var practiceStore: PracticeStore
+  private let practiceStore: PracticeStore
   
   /// Determines when the practice session has been completed.
   /// Compares the session score with the number of assessments generated.
-  @State private var practiceComplete: Bool = false
+  @State private var practiceComplete = false
   
   /// Initializes a new `PracticeView` and generates a `PracticeStore`
   /// instance for the practice session state management.
   init() {
+    practiceStore = PracticeStore()
   }
-  
 }
 
 extension PracticeView: View {
@@ -56,7 +56,7 @@ extension PracticeView: View {
         CongratulationsView()
       } else {
         ChallengeView(
-          onComplete: onComplete
+          onComplete: onComplete, practice: self.practiceStore
         ).onAppear(perform: {
           self.practiceStore.build()
         })

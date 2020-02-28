@@ -31,6 +31,7 @@ import SwiftUI
 import Assessing
 import Languages
 import Learning
+import Combine
 
 /// Displays the challenge information, including question, potential answers, and the score.
 struct ChallengeView {
@@ -39,17 +40,15 @@ struct ChallengeView {
   
   /// Our view-backing state model for managing the practice assessment
   /// sessions for the user.
-  @EnvironmentObject private var practiceStore: PracticeStore
+  @ObservedObject private var practiceStore: PracticeStore
+    
+  // MARK: - Private Constants
   
-  // TODO: Manage these conditions in the `PracticeStore` to reduce
-  // dependency on `@State` values.
   @State private var isAnswered: Bool = false
   
   @State private var isCorrect: Bool = false
   
   @State private var score: Int = 0
-  
-  // MARK: - Private Constants
   
   private let onComplete: () -> Void
   
@@ -63,8 +62,9 @@ struct ChallengeView {
   // MARK: - Initializers
   
   /// Initialize a new `ChallengeView`.
-  init(onComplete: @escaping () -> Void) {
+  init(onComplete: @escaping () -> Void, practice: PracticeStore) {
     self.onComplete = onComplete
+    self.practiceStore = practice
   }
   
   // MARK: - Private Methods
@@ -78,7 +78,7 @@ struct ChallengeView {
   private func challengeOutcomeAlert() -> Alert {
     let alert: Alert
     
-    if isCorrect {
+    if isCorrect  {
       alert = Alert(
         title: Text("Congratulations"),
         message: Text("The answer is correct"),
@@ -90,9 +90,7 @@ struct ChallengeView {
       alert = Alert(
         title: Text("Oh no!"),
         message: Text("Your answer is not correct!"),
-        dismissButton: Alert.Button.default(Text("OK"), action: {
-          
-        })
+        dismissButton: Alert.Button.default(Text("OK"), action: {})
       )
     }
     
@@ -138,14 +136,12 @@ extension ChallengeView: View {
       self.challengeOutcomeAlert()
     })
   }
-  
 }
-
 
 #if DEBUG
 struct ChallengeView_Previews: PreviewProvider {
   static var previews: some View {
-    return ChallengeView(onComplete: {})
+    return ChallengeView(onComplete: {}, practice: PracticeStore())
   }
 }
 

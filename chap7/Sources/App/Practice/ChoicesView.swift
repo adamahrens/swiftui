@@ -38,7 +38,6 @@ struct ChoicesView {
   // MARK: - Private Constants
   
   private let answer: (_ answer: String) -> Void
-  
   private let answers: [String]
   
   // MARK: - Initializers
@@ -47,7 +46,6 @@ struct ChoicesView {
     self.answer = action
     self.answers = answers
   }
-  
 }
 
 extension ChoicesView: View {
